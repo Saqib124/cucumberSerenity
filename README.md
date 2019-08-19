@@ -21,17 +21,25 @@ Feature: [One line describing the story]
 Scenario: [One line describing the scenario]
 
 Given [context]
-And [some more context]…
-When [event]
-Then [outcome]
-And [another outcome]…
-Example
 
+And [some more context]…
+
+When [event]
+
+Then [outcome]
+
+And [another outcome]…
+
+
+##Example
 Scenario: Buy last coffee
 
 Given there are 1 coffees left in the machine
+
 And I have deposited 1$
+
 When I press the coffee button
+
 Then I should be served a coffee
 
 ## Points to take care for “Background”
@@ -82,7 +90,9 @@ Imperative steps mean unnecessarily exposing lots of internal details of the sys
 **Good Example (Declarative):**
 
 Scenario: Login
+
 Given I have logged into the system
+
 Then I should see the ‘Welcome’ message
 
 As you can see, using declarative steps in the scenario makes it shorter and more readable.
@@ -90,12 +100,19 @@ As you can see, using declarative steps in the scenario makes it shorter and mor
 **Bad Example (Imperative):**
 
 Scenario: Login
+
 Given I am on the login page
+
 When I fill “username” with “ABC”
+
 And I fill password with “XYZ”
+
 And I checked the “Remember Me” checkbox
+
 And I click on the “Submit” button
+
 Then I should log into the system
+
 And I should see then ‘Welcome’ message
 
 Instead of writing too many steps like this, we can write couple of declarative steps as mentioned in “Good Example” section.
